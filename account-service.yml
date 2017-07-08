@@ -1,5 +1,5 @@
 server:  
-  port: ${PORT:2222}
+  port: 7000
 
 spring:  
   application:
@@ -14,7 +14,7 @@ spring:
 eureka:  
   client:
     serviceUrl:
-      defaultZone: ${DISCOVERY_URL:http://localhost:8761}/eureka/
+      defaultZone: http://discoveryhost:8000/eureka/, http://discovery-service-primary:8001/eureka/,http://discovery-service-secondary:8002/eureka/,http://discovery-service-tertiary:8003/eureka/
   instance:
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
