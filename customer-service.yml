@@ -1,0 +1,14 @@
+server:  
+  port: 11001
+
+eureka:  
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service-primary:8001/eureka/,http://discovery-service-secondary:8002/eureka/,http://discovery-service-tertiary:8003/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+          
+ribbon:
+  eureka:
+    enabled: true
