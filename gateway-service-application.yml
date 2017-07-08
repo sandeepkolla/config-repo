@@ -1,0 +1,35 @@
+info:
+  component: Edge Server
+  
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+    
+zuul:
+  prefix: /api
+  routes:
+    account: 
+      path: /account/**
+      service-id: account-service
+    customer:
+      path: /customer/**
+      service-id: customer-service
+      
+eureka: 
+  client: 
+    serviceUrl:
+      defaultZone: http://discoveryhost:8000/eureka/, http://discovery-service-primary:8001/eureka/,http://discovery-service-secondary:8002/eureka/,http://discovery-service-tertiary:8003/eureka/
+
+server:
+  port: 10000
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+    
+  
