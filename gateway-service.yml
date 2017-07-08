@@ -28,8 +28,6 @@ server:
   port: 10000
 spring:
   profiles: default
-  application:
-    name: gateway-service
 
 logging:
   level:
