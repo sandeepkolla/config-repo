@@ -16,4 +16,4 @@ eureka:
     leaseExpirationDurationInSeconds: 2
     
 server:
-  port: 10000
+  port: 11000
