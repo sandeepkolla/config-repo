@@ -11,10 +11,10 @@ endpoints:
     
 zuul:
   routes:
-    account-service: 
+    account: 
       path: /account/**
       service-id: account-service
-    customer-service:
+    customer:
       path: /customer/**
       service-id: customer-service
       
