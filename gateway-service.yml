@@ -10,6 +10,7 @@ endpoints:
     sensitive: false
     
 zuul:
+  prefix: /api
   routes:
     account: 
       path: /account/**
@@ -22,7 +23,7 @@ eureka:
   client: 
     serviceUrl:
       defaultZone: http://discoveryhost:8000/eureka/,http://discovery-service-primary:8001/eureka/,http://discovery-service-secondary:8002/eureka/,http://discovery-service-tertiary:8003/eureka/
-    registerWithEureka: true
+    registerWithEureka: false
 
 server:
   port: 10000
