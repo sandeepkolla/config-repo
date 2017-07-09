@@ -8,3 +8,7 @@ spring:
           
 server:
   port: 11000
+
+ribbon:
+  eureka:
+    enabled: true

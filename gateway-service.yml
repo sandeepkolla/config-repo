@@ -29,6 +29,10 @@ server:
 spring:
   profiles: default
 
+ribbon:
+  eureka:
+    enabled: true
+
 logging:
   level:
     ROOT: INFO
