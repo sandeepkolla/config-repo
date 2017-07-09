@@ -10,7 +10,6 @@ endpoints:
     sensitive: false
     
 zuul:
-  prefix: /api
   routes:
     account: 
       path: /account/**
