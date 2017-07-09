@@ -1,14 +1,30 @@
+spring:  
+  profiles: primary
+
 eureka:  
   client:
     serviceUrl:
       defaultZone: http://discovery-service-primary:8001/eureka/,http://discovery-service-secondary:8002/eureka/,http://discovery-service-tertiary:8003/eureka/
-
-spring:  
-  profiles: default
           
 server:
-  port: 11000
+  port: 11001
 
 ribbon:
   eureka:
     enabled: true
+---
+spring:  
+  profiles: secondary
+
+eureka:  
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service-primary:8001/eureka/,http://discovery-service-secondary:8002/eureka/,http://discovery-service-tertiary:8003/eureka/
+          
+server:
+  port: 11002
+
+ribbon:
+  eureka:
+    enabled: true
+
