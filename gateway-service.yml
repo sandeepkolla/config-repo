@@ -12,10 +12,10 @@ endpoints:
 zuul:
   prefix: /api
   routes:
-    account: 
+    account-service: 
       path: /account/**
       service-id: account-service
-    customer:
+    customer-service:
       path: /customer/**
       service-id: customer-service
       
