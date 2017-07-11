@@ -4,7 +4,8 @@ spring:
 eureka:  
   client:
     serviceUrl:
-      defaultZone: http://discovery-service-primary:8001/eureka/,http://discovery-service-secondary:8002/eureka/,http://discovery-service-tertiary:8003/eureka/
+      #defaultZone: http://discovery-service-primary:8001/eureka/,http://discovery-service-secondary:8002/eureka/,http://discovery-service-tertiary:8003/eureka/
+      defaultZone: http://discovery-server:8001/eureka
           
 server:
   port: 11000
